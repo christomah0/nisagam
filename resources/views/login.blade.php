@@ -1,6 +1,6 @@
-<x-layout>
+<x-layouts.app-layout>
     <main class="min-h-screen flex items-center">
-        <x-card class="w-full">
+        <x-card class="w-full" maxWidth="md">
             <div class="text-center mb-6">
                 <img src="/favicon.svg" alt="Logo" class="mx-auto mb-2" width="100" height="100">
                 <h2 class="text-xl font-bold mb-1">NISAGAM</h2>
@@ -49,4 +49,4 @@
             </form>
         </x-card>
     </main>
-</x-layout>
+</x-layouts.app-layout>

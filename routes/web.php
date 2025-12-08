@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\LogoutController;
-use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\Auth\RegisterController;
 use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'dashboard')
@@ -18,10 +18,15 @@ Route::post('/login', LoginController::class)
 
 // Dashboard Route
 Route::view('/dashboard','dashboard')
-->middleware(['auth','verified'])
+// ->middleware(['auth','verified'])
 ->name('dashboard');
 
 // Logout Route
 Route::post('/logout', LogoutController::class)
 ->middleware('auth')
 ->name('logout');
+
+// Register new user
+Route::post('/register', RegisterController::class)
+->middleware('auth:admin')
+->name('register');
