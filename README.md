@@ -184,8 +184,8 @@ Les contributions sont les bienvenues ! Voici comment participer :
 ### 1. Fork et clone
 
 ```bash
-git fork https://github.com/votre-utilisateur/nisagam.git
-git clone https://github.com/votre-fork/nisagam.git
+git fork https://github.com/christomah0/nisagam.git
+git clone https://github.com/votre-nom-utilisateur/nisagam.git
 cd nisagam
 ```
 
@@ -227,7 +227,7 @@ git push origin feature/ma-fonctionnalite
 
 ### Signaler un bug
 
-Ouvrez une [issue](https://github.com/votre-utilisateur/nisagam/issues) avec :
+Ouvrez une [issue](https://github.com/christomah0/nisagam/issues) avec :
 - Description du problème
 - Étapes pour reproduire
 - Comportement attendu vs observé
