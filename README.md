@@ -58,7 +58,7 @@
 ### 1. Cloner le projet
 
 ```bash
-git clone https://github.com/votre-utilisateur/nisagam.git
+git clone https://github.com/christomah0/nisagam.git
 cd nisagam
 ```
 
