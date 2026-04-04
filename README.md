@@ -1,59 +1,248 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  <img src="public/favicon.svg" width="100" alt="NISAGAM Logo">
 </p>
 
-## About Laravel
+<h1 align="center">NISAGAM</h1>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+<p align="center">
+  Système de gestion d'inventaire et de stock pour les entreprises.
+</p>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+<p align="center">
+  <a href="#fonctionnalités">Fonctionnalités</a> •
+  <a href="#captures-décran">Captures d'écran</a> •
+  <a href="#prérequis">Prérequis</a> •
+  <a href="#installation">Installation</a> •
+  <a href="#utilisation">Utilisation</a> •
+  <a href="#contribution">Contribution</a> •
+  <a href="#licence">Licence</a>
+</p>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+<p align="center">
+  <img src="https://img.shields.io/badge/Laravel-12-FF2D20?style=flat-square&logo=laravel&logoColor=white" alt="Laravel 12">
+  <img src="https://img.shields.io/badge/PHP-8.2+-777BB4?style=flat-square&logo=php&logoColor=white" alt="PHP 8.2+">
+  <img src="https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" alt="Tailwind CSS 4">
+  <img src="https://img.shields.io/badge/Alpine.js-3-8BC0D0?style=flat-square&logo=alpine.js&logoColor=white" alt="Alpine.js 3">
+  <img src="https://img.shields.io/badge/Licence-MIT-green?style=flat-square" alt="Licence MIT">
+</p>
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+## Fonctionnalités
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- **Tableau de bord** — Vue d'ensemble avec statistiques en temps réel (produits, fournisseurs, stock bas, valeur totale)
+- **Gestion d'inventaire** — CRUD complet des produits avec filtres par catégorie et recherche
+- **Fournisseurs** — Gestion des fournisseurs avec coordonnées et suivi des produits associés
+- **Finances** — Suivi des transactions d'entrée (achats) et de sortie (ventes) avec mise à jour automatique du stock
+- **Rapports** — Synthèse financière, alertes stock bas, classement des produits
+- **Paramètres** — Gestion des catégories et des utilisateurs
+- **Authentification** — Connexion sécurisée avec sessions
+- **Responsive** — Interface adaptée desktop, tablette et mobile avec bottomsheet et sidebar rétractable
 
-## Laravel Sponsors
+## Captures d'écran
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+> Ajoutez vos captures d'écran dans un dossier `screenshots/` à la racine du projet.
 
-### Premium Partners
+| Desktop | Mobile |
+|---------|--------|
+| ![Dashboard Desktop](screenshots/dashboard-desktop.png) | ![Dashboard Mobile](screenshots/dashboard-mobile.png) |
+| ![Inventaire Desktop](screenshots/inventory-desktop.png) | ![Inventaire Mobile](screenshots/inventory-mobile.png) |
+| ![Fournisseurs Desktop](screenshots/suppliers-desktop.png) | ![Finances Mobile](screenshots/finances-mobile.png) |
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+## Prérequis
 
-## Contributing
+- **PHP** >= 8.2
+- **Composer** >= 2.x
+- **Node.js** >= 18.x et **npm**
+- **MySQL** >= 8.0 (ou MariaDB >= 10.6)
+- **Git**
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Installation
 
-## Code of Conduct
+### 1. Cloner le projet
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```bash
+git clone https://github.com/votre-utilisateur/nisagam.git
+cd nisagam
+```
 
-## Security Vulnerabilities
+### 2. Installer les dépendances
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```bash
+composer install
+npm install
+```
 
-## License
+### 3. Configurer l'environnement
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```bash
+cp .env.example .env
+php artisan key:generate
+```
+
+Modifier le fichier `.env` avec vos paramètres de base de données :
+
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=nisagam
+DB_USERNAME=root
+DB_PASSWORD=votre_mot_de_passe
+```
+
+### 4. Créer la base de données et lancer les migrations
+
+```bash
+mysql -u root -p -e "CREATE DATABASE nisagam;"
+php artisan migrate
+```
+
+### 5. Ajouter les données de démonstration (optionnel)
+
+```bash
+php artisan db:seed
+```
+
+Cela crée un compte administrateur par défaut :
+
+| Champ        | Valeur              |
+|-------------|---------------------|
+| **Email**   | `admin@nisagam.com` |
+| **Mot de passe** | `password`    |
+
+### 6. Compiler les assets et lancer le serveur
+
+```bash
+# Terminal 1 — Serveur PHP
+php artisan serve
+
+# Terminal 2 — Vite (hot reload)
+npm run dev
+```
+
+L'application est accessible sur **http://localhost:8000**.
+
+### Build de production
+
+```bash
+npm run build
+```
+
+## Utilisation
+
+### Structure des modules
+
+| Module | Route | Description |
+|--------|-------|-------------|
+| Tableau de bord | `/` | Statistiques et transactions récentes |
+| Inventaire | `/inventory` | Gestion des produits |
+| Fournisseurs | `/suppliers` | Gestion des fournisseurs |
+| Finances | `/finances` | Transactions d'entrée et de sortie |
+| Rapports | `/reports` | Synthèse et alertes |
+| Paramètres | `/settings` | Catégories et utilisateurs |
+
+### Flux de travail typique
+
+1. **Ajouter des catégories** dans Paramètres
+2. **Ajouter des fournisseurs** dans Fournisseurs
+3. **Créer des produits** dans Inventaire en les associant à une catégorie et un fournisseur
+4. **Enregistrer des transactions** dans Finances — le stock est automatiquement mis à jour
+5. **Consulter les rapports** pour suivre les alertes de stock bas et la synthèse financière
+
+## Structure du projet
+
+```
+nisagam/
+├── app/
+│   ├── Http/Controllers/       # Contrôleurs (Product, Supplier, Transaction, etc.)
+│   └── Models/                 # Modèles Eloquent (Product, Category, Supplier, Transaction)
+├── database/
+│   ├── migrations/             # Schéma de la base de données
+│   └── seeders/                # Données de démonstration
+├── resources/views/
+│   ├── components/             # Composants Blade (modal, nav-link, card, layouts)
+│   ├── inventory/              # Vues inventaire
+│   ├── suppliers/              # Vues fournisseurs
+│   ├── finances/               # Vues finances
+│   ├── reports/                # Vues rapports
+│   └── settings/               # Vues paramètres
+├── routes/web.php              # Définition des routes
+└── public/images/              # Icônes SVG de navigation
+```
+
+## Stack technique
+
+| Technologie | Rôle |
+|------------|------|
+| [Laravel 12](https://laravel.com) | Framework PHP backend |
+| [Tailwind CSS 4](https://tailwindcss.com) | Framework CSS utilitaire |
+| [Alpine.js 3](https://alpinejs.dev) | Interactivité frontend (modals, sidebar) |
+| [Vite](https://vitejs.dev) | Bundler et hot reload |
+| MySQL | Base de données relationnelle |
+
+## Contribution
+
+Les contributions sont les bienvenues ! Voici comment participer :
+
+### 1. Fork et clone
+
+```bash
+git fork https://github.com/votre-utilisateur/nisagam.git
+git clone https://github.com/votre-fork/nisagam.git
+cd nisagam
+```
+
+### 2. Créer une branche
+
+```bash
+git checkout -b feature/ma-fonctionnalite
+```
+
+### 3. Développer et tester
+
+- Respecter le style de code existant (PSR-12 pour PHP)
+- Tester vos modifications localement
+- S'assurer que `php artisan route:list` et `php artisan view:cache` passent sans erreur
+
+### 4. Commiter et pousser
+
+```bash
+git add .
+git commit -m "feat: description de la fonctionnalité"
+git push origin feature/ma-fonctionnalite
+```
+
+### 5. Ouvrir une Pull Request
+
+- Décrire clairement les changements
+- Ajouter des captures d'écran si nécessaire
+- Référencer les issues liées
+
+### Convention de commits
+
+| Préfixe | Usage |
+|---------|-------|
+| `feat:` | Nouvelle fonctionnalité |
+| `fix:` | Correction de bug |
+| `docs:` | Documentation |
+| `style:` | Formatage, style (pas de changement de logique) |
+| `refactor:` | Refactorisation de code |
+
+### Signaler un bug
+
+Ouvrez une [issue](https://github.com/votre-utilisateur/nisagam/issues) avec :
+- Description du problème
+- Étapes pour reproduire
+- Comportement attendu vs observé
+- Captures d'écran si applicable
+
+## Licence
+
+Ce projet est distribué sous la licence **MIT**. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
+
+---
+
+<p align="center">
+  Fait avec <b>Laravel</b>, <b>Tailwind CSS</b> et <b>Alpine.js</b>
+</p>

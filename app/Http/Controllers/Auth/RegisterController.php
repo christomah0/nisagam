@@ -19,10 +19,12 @@ class RegisterController extends Controller
         ]);
 
         // Create the user
-        $user = User::create([
+        User::create([
             'name' => $validated['name'],
             'email' => $validated['email'],
             'password' => Hash::make($validated['password']),
         ]);
+
+        return redirect()->route('settings')->with('success', 'Utilisateur créé avec succès.');
     }
 }

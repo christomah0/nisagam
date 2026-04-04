@@ -1,3 +1,3 @@
-<main {{ $attributes->merge(['class' => 'col-span-2']) }}>
+<main {{ $attributes->merge(['class' => 'lg:ml-64 min-h-screen']) }}>
     {{ $slot }}
 </main>

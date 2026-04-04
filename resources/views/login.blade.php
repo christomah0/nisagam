@@ -1,6 +1,6 @@
 <x-layouts.app-layout>
-    <main class="min-h-screen flex items-center">
-        <x-card class="w-full" maxWidth="md">
+    <main class="min-h-screen flex items-center px-4 sm:px-6">
+        <x-card class="w-4/12" maxWidth="md">
             <div class="text-center mb-6">
                 <img src="/favicon.svg" alt="Logo" class="mx-auto mb-2" width="100" height="100">
                 <h2 class="text-xl font-bold mb-1">NISAGAM</h2>
