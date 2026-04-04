@@ -44,8 +44,6 @@
 | Desktop | Mobile |
 |---------|--------|
 | ![Dashboard Desktop](screenshots/dashboard-desktop.png) | ![Dashboard Mobile](screenshots/dashboard-mobile.png) |
-| ![Inventaire Desktop](screenshots/inventory-desktop.png) | ![Inventaire Mobile](screenshots/inventory-mobile.png) |
-| ![Fournisseurs Desktop](screenshots/suppliers-desktop.png) | ![Finances Mobile](screenshots/finances-mobile.png) |
 
 ## Prérequis
 
