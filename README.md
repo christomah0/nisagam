@@ -41,8 +41,6 @@
 
 ## Captures d'écran
 
-> Ajoutez vos captures d'écran dans un dossier `screenshots/` à la racine du projet.
-
 | Desktop | Mobile |
 |---------|--------|
 | ![Dashboard Desktop](screenshots/dashboard-desktop.png) | ![Dashboard Mobile](screenshots/dashboard-mobile.png) |
