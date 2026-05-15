@@ -8,28 +8,29 @@ use App\Models\Supplier;
 use App\Models\Transaction;
 use App\Models\User;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
     public function run(): void
     {
         // Users
-        User::factory()->create([
+        User::create([
             'name' => 'Admin',
             'email' => 'admin@nisagam.com',
-            'password' => 'password',
+            'password' => Hash::make('password'),
         ]);
 
-        User::factory()->create([
+        User::create([
             'name' => 'Jean Rakoto',
             'email' => 'jean@nisagam.com',
-            'password' => 'password',
+            'password' => Hash::make('password'),
         ]);
 
-        User::factory()->create([
+        User::create([
             'name' => 'Marie Rabe',
             'email' => 'marie@nisagam.com',
-            'password' => 'password',
+            'password' => Hash::make('password'),
         ]);
 
         // Categories

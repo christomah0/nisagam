@@ -59,6 +59,16 @@ return [
             'throw' => false,
             'report' => false,
         ],
+	
+        'gcs' => [
+            'driver' => 'gcs',
+            'project_id' => env('GOOGLE_CLOUD_PROJECT_ID'),
+            'bucket' => env('GOOGLE_CLOUD_STORAGE_BUCKET'),
+            'url' => 'https://storage.googleapis.com/' . env('GOOGLE_CLOUD_STORAGE_BUCKET'),
+            'key_file' => json_decode(env('GCS_SERVICE_ACCOUNT_KEY', '{}'), true),
+            'path_prefix' => env('GOOGLE_CLOUD_STORAGE_PATH_PREFIX', null),
+            'visibility' => 'public',
+        ]
 
     ],
 

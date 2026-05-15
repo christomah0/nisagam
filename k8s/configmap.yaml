@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nisagam-config
+  namespace: default
+data:
+  APP_NAME: "nisagam"
+  APP_ENV: "production"
+  APP_DEBUG: "false"
+  APP_URL: "http://34.27.183.253"
+
+  LOG_CHANNEL: "stderr"
+  LOG_LEVEL: "error"
+
+  DB_CONNECTION: "mysql"
+  DB_HOST: "127.0.0.1"
+  DB_PORT: "3306"
+  DB_DATABASE: "nisagam"
+  DB_USERNAME: "root"
+
+  FILESYSTEM_DISK: "gcs"
+  GOOGLE_CLOUD_PROJECT_ID: "grid-cluster-496304"
+  GOOGLE_CLOUD_STORAGE_BUCKET: "nisagam_bucket-1"
+
+  SESSION_DRIVER: "database"
+  CACHE_STORE: "database"
+  QUEUE_CONNECTION: "database"

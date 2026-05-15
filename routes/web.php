@@ -10,6 +10,7 @@ use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\SupplierController;
 use App\Http\Controllers\TransactionController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PhotoUploadController;
 
 // Guest routes
 Route::middleware('guest')->group(function () {
@@ -47,6 +48,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/settings/categories/{category}', [SettingsController::class, 'destroyCategory'])->name('settings.categories.destroy');
     Route::post('/register', RegisterController::class)->name('register');
     Route::delete('/settings/users/{user}', [SettingsController::class, 'destroyUser'])->name('settings.users.destroy');
+
+    Route::post('/upload', [PhotoUploadController::class, 'upload']);
 
     // Logout
     Route::post('/logout', LogoutController::class)->name('logout');

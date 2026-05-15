@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nisagam
+  namespace: default
+spec:
+  selector:
+    app: nisagam
+  ports:
+    - port: 80
+      targetPort: 80
+  type: LoadBalancer   # gives you a public IP; swap for ClusterIP if using an Ingress

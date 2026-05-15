@@ -1,0 +1,86 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nisagam
+  namespace: default
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nisagam
+  template:
+    metadata:
+      labels:
+        app: nisagam
+    spec:
+      containers:
+        - name: nisagam
+          image: us-central1-docker.pkg.dev/grid-cluster-496304/nisagam-app-repo/app:latest
+          ports:
+            - containerPort: 80
+          envFrom:
+            - configMapRef:
+                name: nisagam-config
+            - secretRef:
+                name: nisagam-secret
+          resources:
+            requests:
+              cpu: "250m"
+              memory: "256Mi"
+            limits:
+              cpu: "500m"
+              memory: "512Mi"
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 80
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 80
+            initialDelaySeconds: 30
+            periodSeconds: 30
+      volumes:
+        - name: sa-key
+          secret:
+            secretName: nisagam-secret
+            items:
+              - key: GCS_SERVICE_ACCOUNT_KEY
+                path: key.json
+      initContainers:
+        # Native sidecar: starts first, stays running alongside migrate and main containers
+        - name: cloud-sql-proxy
+          image: gcr.io/cloud-sql-connectors/cloud-sql-proxy:2
+          args:
+            - "--credentials-file=/secrets/key.json"
+            - "--port=3306"
+            - "grid-cluster-496304:us-central1:free-trial-first-project"
+          restartPolicy: Always
+          volumeMounts:
+            - name: sa-key
+              mountPath: /secrets
+              readOnly: true
+          resources:
+            requests:
+              cpu: "50m"
+              memory: "64Mi"
+          securityContext:
+            runAsNonRoot: true
+        - name: migrate
+          image: us-central1-docker.pkg.dev/grid-cluster-496304/nisagam-app-repo/app:latest
+          # Retry until the proxy is accepting connections, then migrate
+          command:
+            - /bin/sh
+            - -c
+            - |
+              until php artisan migrate --force; do
+                echo "DB not ready, retrying in 5s..."
+                sleep 5
+              done
+          envFrom:
+            - configMapRef:
+                name: nisagam-config
+            - secretRef:
+                name: nisagam-secret
